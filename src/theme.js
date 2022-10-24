@@ -23,7 +23,7 @@ export const theme = {
     textBlack: '#000000',
 
     error: '#FF0000',
-    red: '#E54D62',
+    red: '#E51B36',
     green: '#53AD54',
     lightBlue: '#3171E7',
 
