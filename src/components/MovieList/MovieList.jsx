@@ -5,7 +5,7 @@ import { Item } from './MovieList.styled';
 
 export default function MovieList({ movies }) {
   return (
-    <Box as="ul">
+    <Box as="ul" ml={3}>
       {movies.map(({ id, title }) => (
         <Item key={id}>
           <MovieListItem title={title} id={id} />

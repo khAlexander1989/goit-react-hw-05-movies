@@ -40,12 +40,14 @@ export default function Movies() {
           <PulseLoader size={10} color="#E51B36" />
         </Box>
       )}
-      {status === STATUS.RESOLVED &&
-        (movies.length ? (
-          <MovieList movies={movies} />
-        ) : (
-          <p>There isn't any movie on this page.</p>
-        ))}
+      <Box mt={3}>
+        {status === STATUS.RESOLVED &&
+          (movies.length ? (
+            <MovieList movies={movies} />
+          ) : (
+            <p>There isn't any movie on this page.</p>
+          ))}
+      </Box>
       {status === STATUS.REJECTED && <p>{error}</p>}
     </>
   );

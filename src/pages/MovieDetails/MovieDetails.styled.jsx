@@ -1,6 +1,28 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
+export const GoBackBtn = styled.button`
+  position: fixed;
+  left: 0;
+  bottom: 50%;
+  transform: translateY(-50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+  color: ${p => p.theme.colors.red};
+
+  :hover,
+  :focus {
+    color: ${p => p.theme.colors.lightRed};
+  }
+`;
+
 export const Item = styled.li`
   margin-top: ${p => p.theme.space[3]};
 `;

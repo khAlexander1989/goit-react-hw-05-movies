@@ -3,10 +3,11 @@ import { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
 import { PulseLoader } from 'react-spinners';
+import { MdArrowBackIosNew } from 'react-icons/md';
 
 import { fetchMovieDetailsById } from 'services/fetchMovieAPI';
 import MovieCard from 'components/MovieCard';
-import { Title, Link, Item } from './MovieDetails.styled';
+import { GoBackBtn, Title, Link, Item } from './MovieDetails.styled';
 import { STATUS } from 'services/constants';
 import { Box } from 'components/Box';
 
@@ -46,9 +47,13 @@ export default function MovieDetails() {
   if (status === STATUS.RESOLVED) {
     return (
       <Box as="main">
-        <button type="button" onClick={() => navigate(prevPath)}>
-          Go back
-        </button>
+        <GoBackBtn
+          type="button"
+          onClick={() => navigate(prevPath)}
+          aria-label="Go back button"
+        >
+          <MdArrowBackIosNew size="30" />
+        </GoBackBtn>
         <MovieCard details={movieDetails} />
         <Box borderY="default" borderColor="borderPrimary" py={3}>
           <Title>Additional information</Title>

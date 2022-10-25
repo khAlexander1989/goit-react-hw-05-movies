@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const PageHeader = styled.header`
   display: flex;
   align-items: center;
-  padding: ${p => p.theme.space[2]} ${p => p.theme.space[3]};
+  padding: ${p => p.theme.space[2]} ${p => p.theme.space[4]};
 
   height: 50px;
   background-color: ${p => p.theme.colors.bgPrimary};
@@ -11,5 +11,5 @@ export const PageHeader = styled.header`
 `;
 
 export const Container = styled.div`
-  padding: ${p => p.theme.space[3]};
+  padding: ${p => p.theme.space[4]};
 `;
